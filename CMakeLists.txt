@@ -3,6 +3,9 @@ SET (CMAKE_CXX_STANDARD 17)
 
 project(expression2 CXX)
 
+set(antlr-rt-lib ./3rdparty/antlr4/runtime/Cpp/build/bin/lib)
+
+
 include_directories( 
 ./antlr4 3rdparty/antlr4/runtime/Cpp/build/bin/lib 3rdparty/antlr4/runtime/Cpp/build/bin/bin/ 3rdparty/antlr4/runtime/Cpp/build/bin/include/
 )
