@@ -4,9 +4,14 @@ file(GLOB srcs "*.cpp*")
 
 add_executable(samples ${srcs})
 
-target_include_directories(samples PUBLIC include ../3rdparty/antlr4/runtime/Cpp/build/bin/bin ../3rdparty/antlr4/runtime/Cpp/build/bin/include/antlr4-runtime)
+target_include_directories(samples PUBLIC ../include 
+${antlr4-bin}/bin
+${antlr4-bin}/include/antlr4-runtime
+)
 
-target_link_libraries(samples PUBLIC  ../3rdparty/antlr4/runtime/Cpp/build/bin/lib/antlr4-runtime.lib ../3rdparty/antlr4/runtime/Cpp/build/bin/lib/antlr4-runtime-static.lib)
+target_link_libraries(samples PUBLIC  
+${antlr4-bin}/lib/antlr4-runtime
+${antlr4-bin}/lib/antlr4-runtime-static
+)
 
 
-target_include_directories(samples PUBLIC ../include)
