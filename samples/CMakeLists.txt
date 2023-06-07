@@ -10,8 +10,7 @@ ${antlr4-bin}/include/antlr4-runtime
 )
 
 target_link_libraries(samples PUBLIC  
-${antlr4-bin}/lib/antlr4-runtime
-${antlr4-bin}/lib/antlr4-runtime-static
+${antlr4-bin}/lib/antlr4-runtime.lib
 )
 
 
