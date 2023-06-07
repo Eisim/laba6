@@ -9,4 +9,3 @@ include_directories(include ../3rdparty/antlr4/runtime/Cpp/build/bin/bin ../3rdp
 )
 
 target_link_libraries(include PUBLIC  ../3rdparty/antlr4/runtime/Cpp/build/bin/lib/antlr4-runtime.lib ../3rdparty/antlr4/runtime/Cpp/build/bin/lib/antlr4-runtime-static.lib)
-
