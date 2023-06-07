@@ -12,4 +12,5 @@ ${antlr4-bin}/include/antlr4-runtime
 
 target_link_libraries(include PUBLIC  
 ${antlr4-bin}/lib/antlr4-runtime.lib 
-${antlr4-bin}lib/antlr4-runtime-static.lib)
+)
+

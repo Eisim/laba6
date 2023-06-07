@@ -6,8 +6,8 @@
 class  myVisitor : public mygrammarVisitor {
      std::any visitInt(mygrammarParser::IntContext* context) {
         std::cout << "Visit INT" << std::endl;
-        int first = std::stoi(context->INT()->getText());
-        return first;
+       // int first = std::stoi(context->INT()->getText());
+        return 0;
 
     };
 
