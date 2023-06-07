@@ -26,6 +26,7 @@ class  myVisitor : public mygrammarVisitor {
 
     std::any visitPrint_expr(mygrammarParser::Print_exprContext* context) {
         std::cout << "visit print_expr" << std::endl;
+        visit(context->expr());
         return 0;
     };
 
@@ -50,17 +51,21 @@ class  myVisitor : public mygrammarVisitor {
     };
 
     std::any visitExpr_sep(mygrammarParser::Expr_sepContext* context) {
-        std::cout << "visit Expr_sep" << std::endl;
+        std::cout << "visit Expr_sep"<< std::endl;
+        visit(context->expr());
         return 0;
     };
 
     std::any visitProg_row(mygrammarParser::Prog_rowContext* context) {
-        std::cout << "visit Prog_row" << std::endl;
+        std::cout << "visit Prog_row" <<context->row()->getText()<< std::endl;
+        visit(context->prog());
+        visit(context->row());
         return 0;
     };
 
     std::any visitOneLineProg(mygrammarParser::OneLineProgContext* context) {
-        std::cout << "visit LineProg" << std::endl;
+        std::cout << "visit OneLineProg" <<context->row()->getText()<< std::endl;
+        visit(context->row());
         return 0;
     };
 
