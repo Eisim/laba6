@@ -3,7 +3,12 @@
 #include"mygrammarListener.h"
 
 int main() {
-	std::string express = "print:a;2+3;5+2;";
+	std::string express, tmp;
+	std::cin >> tmp;
+	while (tmp!="exit") {
+		express += tmp;
+		std::cin >> tmp;
+	}
 	std::stringstream stream(express);
 	antlr4::ANTLRInputStream input(stream);
 	mygrammarLexer lexer(&input);
